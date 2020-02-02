@@ -5,15 +5,11 @@
     </head>
     <body class="container">
         <span>{{timestamp}}</span>
-        <h1>Name: {{name}}</h1>
-        <img class="profile-image" src="{{image}}" />
-        <h2>Company: {{company}}</h2>
-
-        <h3>Languages</h3>
+        <h1>Profiles</h1>
         <ol>
-            {{#languages}}
-                <li>{{.}}</li>
-            {{/languages}}
+            {{#profiles}}
+                <li><a href="/profile/{{username}}">{{name}}</a></li>
+            {{/profiles}}
         </ol>
 
         <form action="/addprofile" method="POST">
